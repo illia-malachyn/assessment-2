@@ -1,12 +1,3 @@
-# Backend Developer Assessment - Senior Level (Task 2)
-
-## Instructions
-
-1. Complete all tasks below
-2. Push your solution to a **public GitHub repository**
-
----
-
 ## Task: Architecture Design - Subscription Service
 
 You're the tech lead. Design a complete Subscription Management bounded context.
