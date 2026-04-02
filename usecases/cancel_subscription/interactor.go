@@ -44,8 +44,7 @@ func (i *Interactor) Execute(ctx context.Context, subscriptionID string) error {
 		return err
 	}
 
-	// TODO: Move refund dispatch to an outbox/async processor so DB state and refund side effects
-	// can be retried independently after commit without returning a partial-failure error to caller.
+	// TODO: Move refund dispatch to an outbox/async processor or retry?
 	events := sub.FlushEvents()
 	for _, event := range events {
 		if err := i.handleEvent(ctx, event); err != nil {
